@@ -1,0 +1,26 @@
+[19-Jan-2019 09:50:47 Europe/London] PHP Parse error:  syntax error, unexpected '?' in /home/streamaz/public_html/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 233
+[25-May-2020 16:22:39 Asia/Calcutta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'castzecx_nh2.9'@'localhost' (using password: YES) in /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#1 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#2 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#3 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Databa in /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 664
+[25-May-2020 16:22:43 Asia/Calcutta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'castzecx_nh2.9'@'localhost' (using password: YES) in /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#1 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#2 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#3 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Databa in /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 664
+[25-May-2020 16:23:53 Asia/Calcutta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'castzecx_nh2.9'@'localhost' (using password: YES) in /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#1 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#2 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#3 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Databa in /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 664
+[25-May-2020 16:23:56 Asia/Calcutta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'castzecx_nh2.9'@'localhost' (using password: YES) in /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27
+Stack trace:
+#0 /home/castzecx/public_html/nh2.9/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#1 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\DBAL\Driver\PDOConnection->__construct('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#2 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'castzecx_nh2.9', 'JE(LsFJlqsX(', Array)
+#3 /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Databa in /home/castzecx/public_html/nh2.9/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 664
+[26-May-2020 10:30:28 Asia/Calcutta] PHP Fatal error:  Cannot use App\Config as Config because the name is already in use in /home/castzecx/public_html/nh2.9/app/Http/Controllers/HomeController.php on line 31
