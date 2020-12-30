@@ -25,8 +25,6 @@ class PrimeDetailController extends Controller
      */
     public function showMovie($slug)
     {
-
-
         $movie = Movie::where('slug', $slug)->where('status', 1)->first();
         $type_check = "M";
         $movies = Movie::all();
@@ -70,6 +68,8 @@ class PrimeDetailController extends Controller
                 }
             }
         }
+
+        $config->prime_movie_single;
 
         if ($config->prime_movie_single == 1) {
             return view('movie_single_prime', compact('movie', 'movies', 'filter_series', 'type_check', 'age', 'config'));

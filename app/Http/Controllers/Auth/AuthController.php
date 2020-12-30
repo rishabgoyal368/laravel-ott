@@ -47,7 +47,7 @@ class AuthController extends Controller
      */
     public function handleProviderCallback($provider)
     {
-        dd('x');
+        //dd('x');
         try{
             $user = Socialite::driver($provider)->user();
 

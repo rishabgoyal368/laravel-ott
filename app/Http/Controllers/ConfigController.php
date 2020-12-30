@@ -53,7 +53,7 @@ class ConfigController extends Controller
         }
         $d = \Request::getHost();
         $domain = str_replace("www.", "", $d);
-        if($domain == 'localhost' || strstr( $domain, '.test' ) || strstr( $domain, '192.168.' ) || strstr( $domain, 'mediacity.co.in') || strstr($domain,'castleindia.in') ){
+        if($domain == 'localhost' || $domain == '31.220.62.77' || strstr( $domain, '.test' ) || strstr( $domain, '192.168.' ) || strstr( $domain, 'mediacity.co.in') || strstr($domain,'castleindia.in') ){
             return $this->verifiedupdate($input,$request,$id);
         }else{
           $token = (file_exists(public_path().'/intialize.txt') &&  @file_get_contents(public_path().'/intialize.txt') != null) ? @file_get_contents(public_path().'/intialize.txt') : 0;

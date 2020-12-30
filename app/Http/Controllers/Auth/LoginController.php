@@ -85,10 +85,12 @@ class LoginController extends Controller
        }
        else if(Auth::user()->is_blocked ==1){
             Auth::logout();
+            return back()->with('deleted','You are not authorised to login in this portal.');
             return back()->with('deleted','You Do Not Have Access to This Site Anymore. You are Blocked.');
        } 
        else
       {
+        return back()->with('deleted','You are not authorised to login in this portal.');
         $current_date = Carbon::now()->toDateString();
         Stripe::setApiKey(env('STRIPE_SECRET'));
         if ($auth->stripe_id != null) {
