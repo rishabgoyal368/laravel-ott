@@ -91,6 +91,7 @@ class TimeHistoryController extends Controller
 
             return 'put';
         }
+        return @$times['endtime'];
     }
 
     public function tv_time($endtime, $tv_id, $user_id)

@@ -128,7 +128,8 @@ class HomeSliderController extends Controller
                 if ($slide->slide_image != null) {
                     $image_file = @file_get_contents(public_path() . '/images/home_slider/' . $slide->slide_image);
                     if ($image_file) {
-                        unlink(public_path() . '/images/home_slider/movies' . $slide->slide_image);
+                        // unlink(public_path() . '/images/home_slider/movies' . $slide->slide_image);
+                        unlink(public_path() . '/images/home_slider/' . $slide->slide_image);
                     }
                 }
                 $file->move('images/home_slider/movies', $name);
@@ -136,7 +137,8 @@ class HomeSliderController extends Controller
                 if ($slide->slide_image != null) {
                     $image_file = @file_get_contents(public_path() . '/images/home_slider/' . $slide->slide_image);
                     if ($image_file) {
-                        unlink(public_path() . '/images/home_slider/shows' . $slide->slide_image);
+                        // unlink(public_path() . '/images/home_slider/shows' . $slide->slide_image);
+                        unlink(public_path() . '/images/home_slider/' . $slide->slide_image);
                     }
                 }
                 $file->move('images/home_slider/shows', $name);

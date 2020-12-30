@@ -65,7 +65,7 @@ class LoginController extends Controller
                 return response()->json('Blocked User', 401); 
             }
              else{
-               if (Hash::check('password', $authUser->password)) {
+               if (Hash::check($request->password, $authUser->password)) {
 
                     return $response = $this->issueToken($request,'password');
 

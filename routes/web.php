@@ -163,16 +163,17 @@ Route::middleware(['IsInstalled','isActive' ,'switch_languages', 'ip_block'])->g
 
     Route::get('/page/{slug}','CustomPageController@show')->name('custom.page.show');
 
-      if(Auth::user())
-      {
+      // if(Auth::user())
+      // {
         // menu routes
-       Route::get('/{menu}', 'HomeController@index')->name('home');
-     }else
-     {
+     //   Route::get('/{menu}', 'HomeController@index')->name('home');
+     // }else
+     // {
       // main page route
-       Route::get('/', 'HomeController@mainPage');
+       // Route::get('/', 'HomeController@mainPage');
+       Route::get('/', 'Auth\LoginController@showLoginForm');
 
-     }
+     // }
 
      // Faq routes
 

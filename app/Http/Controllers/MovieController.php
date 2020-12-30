@@ -107,7 +107,7 @@ class MovieController extends Controller
             })->addColumn('action', function ($movies) {
                 if ($movies->status == 1) {
                     $btn = ' <div class="admin-table-action-block">
-                      <a href="' . url('movie/detail', $movies->slug) . '" data-toggle="tooltip" data-original-title="Page Preview" target="_blank" class="btn-default btn-floating"><i class="material-icons">desktop_mac</i></a>';
+                      <a href="' . url('movie/detail', $movies->slug) . '" data-toggle="tooltip" data-original-title="Page Preview" class="btn-default btn-floating"><i class="material-icons">desktop_mac</i></a>';
                 } else {
                     $btn = ' <div class="admin-table-action-block">
                       <a style="cursor: not-allowed" data-toggle="tooltip" data-original-title="Page Preview" target="_blank" class="btn-default btn-floating"><i class="material-icons">desktop_mac</i></a>';
@@ -681,6 +681,7 @@ class MovieController extends Controller
                     VideoLink::create(['movie_id' => $created_movie->id, 'type' => 'readyurl', 'ready_url' => $input['ready_url'], 'iframeurl' => null, 'url_360' => null, 'url_480' => null, 'url_720' => null, 'url_1080' => null]);
 
                 } elseif ($request->selecturl == 'multiqcustom') {
+                    return $request->file('upload_video_360');
 
                     if ($file = $request->file('upload_video_360')) {
                         $name = time() . $file->getClientOriginalName();

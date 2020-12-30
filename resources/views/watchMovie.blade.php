@@ -41,34 +41,34 @@
       <script type="text/javascript">
 	 $(document).ready(function(){
 	 	var SITEURL = '{{URL::to('')}}';
-	 	 setInterval(function(){
+	 // 	 setInterval(function(){
 	 		
-	 		var tt = FWDUVPlayer.instaces_ar.length;
-			var movie_id='{{$movie->id}}';
-			var user_id='{{Auth::check() ? Auth::user()->id : $user}}'
-			 var video;
+	 // 		var tt = FWDUVPlayer.instaces_ar.length;
+		// 	var movie_id='{{$movie->id}}';
+		// 	var user_id='{{Auth::check() ? Auth::user()->id : $user}}'
+		// 	 var video;
 			
 
-			 // console.log(movie_id);
-		for(var i=0; i<tt; i++){
-			video = FWDUVPlayer.instaces_ar[i];
+		// 	 // console.log(movie_id);
+		// for(var i=0; i<tt; i++){
+		// 	video = FWDUVPlayer.instaces_ar[i];
 
-			 // console.log(video['curTime']);
+		// 	 // console.log(video['curTime']);
 
-			 $.ajax({
-            type: "get",
-            url: SITEURL + "/user/movie/time/"+video['curTime']+'/'+movie_id+'/'+user_id,
-            success: function (data) {
-             console.log(data);
-            },
-            error: function (data) {
-               console.log(data)
-            }
-        });
-			}
+		// 	 $.ajax({
+  //           type: "get",
+  //           url: SITEURL + "/user/movie/time/"+video['curTime']+'/'+movie_id+'/'+user_id,
+  //           success: function (data) {
+  //            console.log(data);
+  //           },
+  //           error: function (data) {
+  //              console.log(data)
+  //           }
+  //       });
+		// 	}
 
 	 		 
-	 	},5000);
+	 // 	},5000);
          
 	
   });

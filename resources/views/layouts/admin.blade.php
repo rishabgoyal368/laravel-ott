@@ -84,15 +84,15 @@
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
           <span class="sr-only">Toggle navigation</span>
         </a>
-        @if (isset($nav_menus) && count($nav_menus) > 0)
+       <!--  @if (isset($nav_menus) && count($nav_menus) > 0)
         <a href="{{isset($nav_menus[0]) ? route('home', $nav_menus[0]->slug) : '#'}}" target="_blank" class="visit-site-btn btn" title="Visit Site">Visit Site <i class="material-icons right">keyboard_arrow_right</i></a>
         @else
         <a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Please create at least one menu to visit the site" class="visit-site-btn btn">Visit Site <i class="material-icons right">keyboard_arrow_right</i></a>
-        @endif
+        @endif -->
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
-            <li class="dropdown admin-nav">
+            <!-- <li class="dropdown admin-nav">
               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="material-icons">language</i> {{Session::has('changed_language') ? Session::get('changed_language') : ''}}</button>
               <ul class="dropdown-menu animated flipInX">
                 @if (isset($languages) && count($languages) > 0)
@@ -101,7 +101,7 @@
                 @endforeach
                 @endif
               </ul>
-            </li>
+            </li> -->
             <li class="dropdown admin-nav">
               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="material-icons">account_circle</i></button>
               <ul class="dropdown-menu animated flipInX">
