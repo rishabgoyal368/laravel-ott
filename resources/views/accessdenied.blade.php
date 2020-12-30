@@ -25,7 +25,7 @@
                			<h4>{{ __('You can use this project only in single domain for multiple domain please check License standard') }} <a target="_blank" href="https://codecanyon.net/licenses/standard">{{ __('here') }}</a>.</h4>
    				</div>
    			</div>
-        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | Next Hour - Movie Tv Show & Video Subscription Portal Cms | <a class="text-white" href="http://mediacity.co.in">{{ __('Media City') }}</a></p>
+        <p class="text-center m-3 text-white">&copy;{{ date('Y') }} | {{ env('APP_NAME') }} - Movie Tv Show & Video Subscription Portal Cms | <a class="text-white" href="http://mediacity.co.in">{{ __('Media City') }}</a></p>
       </div>
       <div class="corner-ribbon bottom-right sticky green shadow">{{ __('Warning') }} </div>
 	

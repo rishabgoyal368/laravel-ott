@@ -9,7 +9,7 @@
           {!! Form::open(['method' => 'POST', 'action' => 'LandingPageController@store', 'files' => true]) !!}
             <div class="form-group{{ $errors->has('heading') ? ' has-error' : '' }}">
                 {!! Form::label('heading', 'Heading') !!}
-                <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Please enter heading eg:Join next hour"></i>
+                <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Please enter heading eg:Join {{ env('APP_NAME') }}"></i>
                 {!! Form::text('heading', null, ['class' => 'form-control', 'placeholder'=>'Please enter heading']) !!}
                 <small class="text-danger">{{ $errors->first('heading') }}</small>
             </div>
