@@ -105,10 +105,25 @@ class MainController extends Controller
     $menu = Menu::all()->toArray();
     return response()->json(array('menu'=>$menu), 200);
   }
-  public function movie(){
-    $movie = Movie::all()->toArray();
+  public function movie(Request $request){
+    $type = $request->all('type');
+    if($type == 'upcoming'){
+      $movie = Movie::whereDate('released', '>=', date('Y-m-d'))->get()->toArray();  
+    }
+    else if($type == 'new')
+    {
+      $movie = Movie::whereDate('released', '<=', date('Y-m-d'))->get()->toArray();  
+    }
+    else{
+      $movie = Movie::all()->toArray();
+    }
     return response()->json(array('movie'=>$movie), 200);       
   }
+
+  public function newMovies(){
+    
+  }
+
   public function tvseries(){
     $tvseries = TvSeries::all()->toArray();
     return response()->json(array('tvseries'=>$tvseries), 200);    
@@ -240,17 +255,16 @@ class MainController extends Controller
   
  
 
- public function MovieByCategory($id){
+ public function MovieByCategory($id = null){
+   $tvseries = [];
     $auth = Auth::user();
     $movie = Movie::with('movie_series','video_link','comments.subcomments')
-             ->whereHas('menus',function($query) use ($id){
-                $query->where('menu_id', $id);
-            })->get(); 
+             ->get(); 
 
-    $tvseries = TvSeries::with('seasons.episodes.video_link','comments.subcomments')
-                  ->whereHas('menus',function($query) use ($id){
-                      $query->where('menu_id', $id);
-                  })->get();
+    // $tvseries = TvSeries::with('seasons.episodes.video_link','comments.subcomments')
+    //               ->whereHas('menus',function($query) use ($id){
+    //                   $query->where('menu_id', $id);
+    //               })->get();
 
     $movieCount = count($movie);
     $tvCount = count($tvseries);
@@ -296,13 +310,13 @@ class MainController extends Controller
   {
     $auth = Auth::user();
 
-    $request->validate([
-      'email' => 'required',
-      'current_password' => 'required',
-    ]);
+    // $request->validate([
+    //   // 'email' => 'required',
+    //   // 'current_password' => 'required',
+    // ]);
     $input = $request->all();
 
-    if (Hash::check($request->current_password, $auth->password)){
+    // if (Hash::check($request->current_password, $auth->password)){
       if ($file = $request->file('image')) {
         if ($auth->image != null) {      
           $image_file = @file_get_contents(public_path().'/images/user/'.$auth->image);
@@ -316,18 +330,18 @@ class MainController extends Controller
       }
       $auth->update([        
         'name' => isset($input['name']) ? $input['name'] : $auth->name,
-        'email' => $input['email'],
-        'password' => isset($input['new_password']) ? bcrypt($input['new_password']) : $auth->password,
+        // 'email' => $input['email'],
+        // 'password' => isset($input['new_password']) ? bcrypt($input['new_password']) : $auth->password,
         'mobile' => isset($input['mobile']) ? $input['mobile'] : $auth->mobile,
         'dob' => isset($input['dob']) ? $input['dob'] : $auth->dob,
         'image' =>  isset($input['image']) ? $input['image'] : $auth->image,
       ]);
       $auth->save();
       return response()->json(array('auth' =>$auth), 200);
-    } 
-    else {
-      return response()->json('error: password doesnt match', 400);
-    }
+    // } 
+    // else {
+    //   return response()->json('error: password doesnt match', 400);
+    // }
   }
   public function add_wishlist(Request $request)
   {

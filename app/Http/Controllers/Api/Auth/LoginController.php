@@ -37,7 +37,7 @@ class LoginController extends Controller
             return response()->json('Blocked User', 401); 
         }
         else{
-            if($authUser->status == 0){
+            if(@$authUser->status == 0){
                return response()->json('Please Verify your mail !', 201);
             }
             else{

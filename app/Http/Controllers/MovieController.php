@@ -32,7 +32,6 @@ class MovieController extends Controller
      */
     public function index(Request $request)
     {
-
         if (Auth::user()->is_assistant == 1) {
             $movies = \DB::table('movies')->select('id', 'slug', 'title', 'thumbnail', 'poster', 'rating', 'tmdb', 'featured', 'status', 'created_by')
                 ->where('live', 0)
@@ -681,7 +680,7 @@ class MovieController extends Controller
                     VideoLink::create(['movie_id' => $created_movie->id, 'type' => 'readyurl', 'ready_url' => $input['ready_url'], 'iframeurl' => null, 'url_360' => null, 'url_480' => null, 'url_720' => null, 'url_1080' => null]);
 
                 } elseif ($request->selecturl == 'multiqcustom') {
-                    return $request->file('upload_video_360');
+                    // return $request->file('upload_video_360');
 
                     if ($file = $request->file('upload_video_360')) {
                         $name = time() . $file->getClientOriginalName();

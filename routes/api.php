@@ -35,6 +35,7 @@ use Illuminate\Http\Request;
 Route::group(['middleware' => ['auth:api','is_blocked']], function (){
   Route::get('menu', 'Api\MainController@menu');
   Route::get('movie', 'Api\MainController@movie');
+  Route::get('newMovies', 'Api\MainController@newMovies');
   Route::get('tvseries', 'Api\MainController@tvseries');
   Route::get('movietv', 'Api\MainController@movietv');
   Route::get('main', 'Api\MainController@index');
@@ -45,7 +46,7 @@ Route::group(['middleware' => ['auth:api','is_blocked']], function (){
   // Route::get('footer', 'Api\MainController@footer_details');
   Route::get('RecentMovies', 'Api\MainController@RecentMovies');
   Route::get('RecentTvSeries', 'Api\MainController@Recenttvseries');
-  Route::get('MenuByCategory/{id}', 'Api\MainController@MovieByCategory');
+  Route::get('MenuByCategory/{id?}', 'Api\MainController@MovieByCategory');
   Route::get('episodes/{id}', 'Api\MainController@episodes');
 
   

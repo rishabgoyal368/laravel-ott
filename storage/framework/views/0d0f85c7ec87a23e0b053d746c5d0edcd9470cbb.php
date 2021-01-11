@@ -639,9 +639,9 @@
     <small class="text-danger"><?php echo e($errors->first('rating')); ?></small>
   </div>
   <div class="form-group<?php echo e($errors->has('released') ? ' has-error' : ''); ?>">
-    <?php echo Form::label('released', 'Released'); ?>
+    <?php echo Form::label('released', 'Release on'); ?>
 
-    <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Please enter movie released date eg:26-07-2019"></i>
+    <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Please enter movie release date"></i>
     <?php echo Form::date('released', null, ['class' => 'form-control']); ?>
 
     <small class="text-danger"><?php echo e($errors->first('released')); ?></small>

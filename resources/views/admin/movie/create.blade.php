@@ -595,8 +595,8 @@
     <small class="text-danger">{{ $errors->first('rating') }}</small>
   </div>
   <div class="form-group{{ $errors->has('released') ? ' has-error' : '' }}">
-    {!! Form::label('released', 'Released') !!}
-    <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Please enter movie released date eg:26-07-2019"></i>
+    {!! Form::label('released', 'Release on') !!}
+    <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Please enter movie release date"></i>
     {!! Form::date('released', null, ['class' => 'form-control']) !!}
     <small class="text-danger">{{ $errors->first('released') }}</small>
   </div>

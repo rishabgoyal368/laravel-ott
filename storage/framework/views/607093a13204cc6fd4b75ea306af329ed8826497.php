@@ -4,7 +4,7 @@
     Copyright (c) 2020 .
     **********************************************************************************************************  -->
 <!--
-Template Name: Next Hour - Movie Tv Show & Video Subscription Portal Cms Web and Mobile App
+Template Name: <?php echo e(env('APP_NAME')); ?> - Movie Tv Show & Video Subscription Portal Cms Web and Mobile App
 Version: 3.0.1
 Author: Media City
 -->

@@ -43,6 +43,7 @@
         "spatie/laravel-translatable": "^4.3",
         "stripe/stripe-php": "^7.37",
         "supervisorphp/supervisor": "^3.0",
+        "twilio/sdk": "^6.15",
         "tzsk/payu": "^4.0.1",
         "unicodeveloper/laravel-paystack": "^1.0",
         "vimeo/laravel": "^5.0",

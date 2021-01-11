@@ -177,11 +177,11 @@
         <?php if($config->blog == 1): ?>
          <li><a class="<?php echo e(Nav::isResource('blog')); ?>" href="<?php echo e(route('blog.index')); ?>" title="Blogs"><i class="material-icons">pages</i> <span>Blog</span></a></li>
         <?php endif; ?>
-        <li><a class="<?php echo e(Nav::isResource('notification')); ?>" href="<?php echo e(route('notification.create')); ?>" title="Genres"><i class="material-icons">notifications_active</i> <span>Notification</span></a></li>
+        <!-- <li><a class="<?php echo e(Nav::isResource('notification')); ?>" href="<?php echo e(route('notification.create')); ?>" title="Genres"><i class="material-icons">notifications_active</i> <span>Notification</span></a></li> -->
 
         <li><a class="<?php echo e(Nav::isResource('audio_language')); ?>" href="<?php echo e(url('/admin/audio_language')); ?>" title="Audio Languages"><i class="material-icons">queue_music</i> <span>Audio Languages</span></a></li>
 
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#" class="<?php echo e(Nav::isResource('home_slider')); ?> <?php echo e(Nav::isResource('landing-page')); ?> <?php echo e(Nav::isResource('auth-page-customize')); ?> <?php echo e(Nav::isRoute('social.ico')); ?> <?php echo e(Nav::isResource('home-block')); ?> <?php echo e(Nav::isResource('custom_page')); ?>" title="Site Customization" id="sitecustomization">
             <i class="material-icons">view_quilt</i> <span>Site Customization</span>
             <span class="pull-right-container">
@@ -200,9 +200,9 @@
            
              <li><a class="<?php echo e(Nav::isResource('home-block')); ?>" href="<?php echo e(url('/admin/home-block')); ?>" title="Home Block Settings"><i class="fa fa-circle-o"></i> <span>Promotion Settings</span></a></li>
           </ul>
-        </li>
+        </li> -->
 
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#" class="<?php echo e(Nav::isRoute('addedmovies')); ?> <?php echo e(Nav::isRoute('addedTvSeries')); ?> <?php echo e(Nav::isRoute('addedLiveTv')); ?>" title="Producer Settings">
             <i class="material-icons">ondemand_video</i> <span>Producer Settings</span>
             <span class="pull-right-container">
@@ -214,7 +214,7 @@
             <li><a class="<?php echo e(Nav::isRoute('addedTvSeries')); ?>" href="<?php echo e(route('addedTvSeries')); ?>" title="Movies"><i class="fa fa-circle-o"></i> <span>Added TV Series</span></a></li>
             <li><a class="<?php echo e(Nav::isRoute('addedLiveTv')); ?>" href="<?php echo e(route('addedLiveTv')); ?>" title="Live TV"><i class="fa fa-circle-o"></i> <span>Added LiveTv</span></a></li>
           </ul>
-        </li>
+        </li> -->
 
         <li class="treeview">
           <a href="#" class="<?php echo e(Nav::isResource('settings')); ?> <?php echo e(Nav::isRoute('term_con')); ?> <?php echo e(Nav::isRoute('pri_pol')); ?> <?php echo e(Nav::isRoute('refund_pol')); ?><?php echo e(Nav::isRoute('adsense')); ?><?php echo e(Nav::isRoute('sociallogin')); ?> <?php echo e(Nav::isRoute('copyright')); ?> <?php echo e(Nav::isRoute('mail.getset')); ?> <?php echo e(Nav::isRoute('term_con')); ?>" title="Site Settings" id="sitesettings">
@@ -226,27 +226,27 @@
           <ul class="treeview-menu">
             <li class="<?php echo e(Nav::isResource('settings')); ?>"><a href="<?php echo e(url('admin/settings')); ?>" title="Settings"><i class="fa fa-circle-o"></i> Settings</a></li>
            
-             <li class="<?php echo e(Nav::isRoute('sociallogin')); ?>"><a href="<?php echo e(url('/admin/social-login')); ?>" title="Social Login Setting"><span><i class="fa fa-circle-o"></i> &nbsp;&nbsp;Social Login Settings</span></a></li>
+             <!-- <li class="<?php echo e(Nav::isRoute('sociallogin')); ?>"><a href="<?php echo e(url('/admin/social-login')); ?>" title="Social Login Setting"><span><i class="fa fa-circle-o"></i> &nbsp;&nbsp;Social Login Settings</span></a></li> -->
 
-              <li><a class="<?php echo e(Nav::isRoute('chat.index')); ?>" href="<?php echo e(route('chat.index')); ?>" title="Active Plan"><span><i class="fa fa-circle-o"></i> &nbsp;<span>Chat Settings</span></a>
+              <!-- <li><a class="<?php echo e(Nav::isRoute('chat.index')); ?>" href="<?php echo e(route('chat.index')); ?>" title="Active Plan"><span><i class="fa fa-circle-o"></i> &nbsp;<span>Chat Settings</span></a> -->
           </li>
             
-            <li class="<?php echo e(Nav::isRoute('adsense')); ?>"><a href="<?php echo e(url('/admin/adsensesetting')); ?>" title="Page Setting"><span><i class="fa fa-circle-o"></i> &nbsp;&nbsp;Adsense Settings</span></a></li>
+            <!-- <li class="<?php echo e(Nav::isRoute('adsense')); ?>"><a href="<?php echo e(url('/admin/adsensesetting')); ?>" title="Page Setting"><span><i class="fa fa-circle-o"></i> &nbsp;&nbsp;Adsense Settings</span></a></li> -->
 
-            <li class="<?php echo e(Nav::isRoute('term_con')); ?>"><a href="<?php echo e(url('admin/term&con')); ?>" title="Terms &amp; Condition"><i class="fa fa-circle-o"></i> Terms &amp; Condition</a></li>
+            <!-- <li class="<?php echo e(Nav::isRoute('term_con')); ?>"><a href="<?php echo e(url('admin/term&con')); ?>" title="Terms &amp; Condition"><i class="fa fa-circle-o"></i> Terms &amp; Condition</a></li>
             <li class="<?php echo e(Nav::isRoute('pri_pol')); ?>"><a href="<?php echo e(url('admin/pri_pol')); ?>" title="Privacy Policy"><i class="fa fa-circle-o"></i> Privacy Policy</a></li>
             <li class="<?php echo e(Nav::isRoute('refund_pol')); ?>"><a href="<?php echo e(url('admin/refund_pol')); ?>" title="Refund Policy"><i class="fa fa-circle-o"></i> Refund Policy</a></li>
             <li class="<?php echo e(Nav::isRoute('copyright')); ?>"><a href="<?php echo e(url('admin/copyright')); ?>" title="Copyright"><i class="fa fa-circle-o"></i> Copyright</a></li>
 
-            <li class="<?php echo e(Nav::isRoute('customstyle')); ?>"><a href="<?php echo e(url('admin/custom-style-settings')); ?>" title="Custom Css and Style"><i class="fa fa-circle-o"></i> Custom Style</a></li>
+            <li class="<?php echo e(Nav::isRoute('customstyle')); ?>"><a href="<?php echo e(url('admin/custom-style-settings')); ?>" title="Custom Css and Style"><i class="fa fa-circle-o"></i> Custom Style</a></li> -->
 
 
           </ul>
         </li>
 
-        <li><a class="<?php echo e(Nav::isRoute('pwa.setting.index')); ?>" href="<?php echo e(route('pwa.setting.index')); ?>" title="Custom Pages"><i class="material-icons">devices_other</i> <span>PWA Settings</span></a></li>
+        <!-- <li><a class="<?php echo e(Nav::isRoute('pwa.setting.index')); ?>" href="<?php echo e(route('pwa.setting.index')); ?>" title="Custom Pages"><i class="material-icons">devices_other</i> <span>PWA Settings</span></a></li> -->
          
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#" class="<?php echo e(Nav::isRoute('player.set')); ?> <?php echo e(Nav::isRoute('ads')); ?>" title="Player Settings" id="player">
             <i class="material-icons">settings</i> <span>Player Setting</span>
             <span class="pull-right-container">
@@ -259,9 +259,9 @@
              <?php $ads = App\Ads::all(); ?>
 
           </ul>
-        </li>
+        </li> -->
 
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#" class="<?php echo e(Nav::isResource('coupons')); ?> <?php echo e(Nav::isResource('report')); ?>" title="Stripe Settings">
             <i class="material-icons">more</i> <span>Stripe Settings</span>
             <span class="pull-right-container">
@@ -274,34 +274,34 @@
                 <li><a class="<?php echo e(Nav::isResource('report')); ?>" href="<?php echo e(url('/admin/report')); ?>" title="Stripe Reports"><i class="material-icons">assignment</i> <span>Stripe Reports</span></a></li>
                 <?php endif; ?>
           </ul>
-        </li>
+        </li> -->
      
 
-        <li><a class="<?php echo e(Nav::isResource('menual_payment')); ?>" href="<?php echo e(url('/admin/manual_payment')); ?>" title="Manual Payment Transaction"><i class="material-icons">list_alt</i> <span>Manual Payments</span></a></li>
+        <!-- <li><a class="<?php echo e(Nav::isResource('menual_payment')); ?>" href="<?php echo e(url('/admin/manual_payment')); ?>" title="Manual Payment Transaction"><i class="material-icons">list_alt</i> <span>Manual Payments</span></a></li> -->
 
-        <li class="treeview">
-          <a href="#" class="<?php echo e(Nav::isRoute('pricing.get')); ?> <?php echo e(Nav::isResource('languages')); ?>" id="language">
+        <!-- <li class="treeview"> -->
+          <!-- <a href="#" class="<?php echo e(Nav::isRoute('pricing.get')); ?> <?php echo e(Nav::isResource('languages')); ?>" id="language">
             <i class="material-icons">translate</i> <span>Translations</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a class="<?php echo e(Nav::isResource('languages')); ?>" href="<?php echo e(url('/admin/languages')); ?>" title="Languages"><i class="fa fa-circle-o"></i><span>Languages</span></a></li>
+          </a> -->
+          <!-- <ul class="treeview-menu"> -->
+            <!-- <li><a class="<?php echo e(Nav::isResource('languages')); ?>" href="<?php echo e(url('/admin/languages')); ?>" title="Languages"><i class="fa fa-circle-o"></i><span>Languages</span></a></li> -->
          
             <?php
             $package=App\Package::first();
             ?>
             <?php if(isset($package)): ?>
            
-            <li class="<?php echo e(Nav::isRoute('pricing.get')); ?>"><a href="<?php echo e(route('pricing.get',$package->id)); ?>" title="Custom Pricing text"><i class="fa fa-circle-o"></i>Pricing Text</a></li>
+            <!-- <li class="<?php echo e(Nav::isRoute('pricing.get')); ?>"><a href="<?php echo e(route('pricing.get',$package->id)); ?>" title="Custom Pricing text"><i class="fa fa-circle-o"></i>Pricing Text</a></li> -->
           
             <?php endif; ?>
-          </ul>
-        </li>
+          <!-- </ul> -->
+        <!-- </li> -->
        
 
-        <li><a class="<?php echo e(Nav::isResource('faqs')); ?>" href="<?php echo e(url('/admin/faqs')); ?>" title="FAQ's"><i class="material-icons">question_answer</i> <span>FAQ's</span></a></li>
+        <!-- <li><a class="<?php echo e(Nav::isResource('faqs')); ?>" href="<?php echo e(url('/admin/faqs')); ?>" title="FAQ's"><i class="material-icons">question_answer</i> <span>FAQ's</span></a></li> -->
 
         <li class="treeview">
           <a href="#" class="<?php echo e(Nav::isRoute('device_history')); ?> <?php echo e(Nav::isRoute('revenue.report')); ?> <?php echo e(Nav::isRoute('view.track')); ?>" title="Site Settings" id="sitesettings">
